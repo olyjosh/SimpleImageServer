@@ -6,8 +6,9 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var signatureRouter = require('./routes/signature');
+const cors = require('cors')
 
-var app = express();
+var app = express(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
