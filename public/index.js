@@ -14,7 +14,8 @@
     }
 
     for (let i = 1; i <= 1000; i++) {
-        temp.name = i%2==0 ? "Pirate #" + i : "Bounty Hunter #" + i
+        temp.name = i%2==0 ? "Pirate #" + i : "Bounty Hunter #" + i;
+        temp.image = 'https://oyinft.herokuapp.com/'+i+'.png'
         await fs.writeFileSync(i + '.json', JSON.stringify(temp))
 
         // copy 
